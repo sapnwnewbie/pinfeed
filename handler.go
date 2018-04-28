@@ -11,6 +11,7 @@ import (
 const (
 	origin  = "https://www.pinterest.com/"
 	repoURL = "https://github.com/sapnwnewbie/pinfeed"
+	hidSITE = "http://hid360.com/post/168668301576/when-you-have-a-longish-kitchen"
 )
 
 var (
@@ -35,7 +36,7 @@ var (
 func pinFeed(w http.ResponseWriter, r *http.Request) {
 	// Home page:
 	if r.URL.Path == "/" {
-		http.Redirect(w, r, repoURL, http.StatusMovedPermanently)
+		http.Redirect(w, r, hidSITE, http.StatusMovedPermanently)
 		return
 	}
 
